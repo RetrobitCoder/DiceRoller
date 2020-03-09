@@ -250,7 +250,7 @@ public class PropertiesWindow extends JFrame
 		diceTrayImageWidth.setText("1000");
 		diceTrayImageHeight.setText("349");
 		imageSide.setText("50");
-		rollValueColor.setText("#FFFFFF");
+		rollValueColor.setText("#FFC270");
 
 		prop.reload(true);
 

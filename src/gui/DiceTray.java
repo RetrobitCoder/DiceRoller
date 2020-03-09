@@ -100,8 +100,8 @@ public class DiceTray extends JPanel
 	{
 		int x = UPPER_X;
 		int y = UPPER_Y;
-		final int X_OFFSET = 15;
-		final int Y_OFFSET = 25;
+		final int X_OFFSET = prop.getImageSide() / 2 - 8;
+		final int Y_OFFSET = prop.getImageSide() / 2 + 6;
 		final int IMAGE_SPACING = 60;
 
 		drawBackground(g);
