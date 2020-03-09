@@ -105,7 +105,7 @@ public class ConfigProperties
 	{
 
 		if (configNotFound || properties.getProperty("diceTrayWidth") == null)
-			return 3600;
+			return 4000;
 
 		try
 		{
@@ -118,14 +118,14 @@ public class ConfigProperties
 					JOptionPane.ERROR_MESSAGE, icon
 			);
 
-			return 3600;
+			return 4000;
 		}
 	}
 
 	public int getDiceTrayHeight()
 	{
 		if (configNotFound || properties.getProperty("diceTrayHeight") == null)
-			return 500;
+			return 698;
 
 		try
 		{
@@ -138,7 +138,49 @@ public class ConfigProperties
 					JOptionPane.ERROR_MESSAGE, icon
 			);
 
-			return 500;
+			return 698;
+		}
+	}
+	
+	public int getDiceTrayImageWidth()
+	{
+
+		if (configNotFound || properties.getProperty("diceTrayImageWidth") == null)
+			return 1000;
+
+		try
+		{
+			return Integer.parseInt(properties.getProperty("diceTrayImageWidth").trim());
+		}
+		catch (NumberFormatException e)
+		{
+			JOptionPane.showMessageDialog(
+					null, "Dice tray image width couldn't be read as a number. Using default.", "Config Error",
+					JOptionPane.ERROR_MESSAGE, icon
+			);
+
+			return 1000;
+		}
+	}
+	
+	public int getDiceTrayImageHeight()
+	{
+
+		if (configNotFound || properties.getProperty("diceTrayImageHeight") == null)
+			return 349;
+
+		try
+		{
+			return Integer.parseInt(properties.getProperty("diceTrayImageHeight").trim());
+		}
+		catch (NumberFormatException e)
+		{
+			JOptionPane.showMessageDialog(
+					null, "Dice tray image height couldn't be read as a number. Using default.", "Config Error",
+					JOptionPane.ERROR_MESSAGE, icon
+			);
+
+			return 349;
 		}
 	}
 

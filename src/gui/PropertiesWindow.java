@@ -29,6 +29,8 @@ public class PropertiesWindow extends JFrame
 	private JTextField dieImagesLoc;
 	private JTextField diceTrayWidth;
 	private JTextField diceTrayHeight;
+	private JTextField diceTrayImageWidth;
+	private JTextField diceTrayImageHeight;
 	private JTextField imageSide;
 	private JTextField rollValueColor;
 
@@ -91,6 +93,8 @@ public class PropertiesWindow extends JFrame
 		JLabel dieImagesLocLabel = new JLabel("Location for Die and Dice Tray Images:");
 		JLabel diceTrayWidthLabel = new JLabel("Dice Tray Width:");
 		JLabel diceTrayHeightLabel = new JLabel("Dice Tray Height;");
+		JLabel diceTrayImageWidthLabel = new JLabel("Dice Tray Image Width:");
+		JLabel diceTrayImageHeightLabel = new JLabel("Dice Tray Image Height;");
 		JLabel imageSideLabel = new JLabel("Image Side;");
 		JLabel rollValueColorLabel = new JLabel("Roll Value Color:");
 
@@ -105,6 +109,10 @@ public class PropertiesWindow extends JFrame
 		panel.add(diceTrayWidthLabel);
 		panel.add(Box.createVerticalStrut(spacing));
 		panel.add(diceTrayHeightLabel);
+		panel.add(Box.createVerticalStrut(spacing));
+		panel.add(diceTrayImageWidthLabel);
+		panel.add(Box.createVerticalStrut(spacing));
+		panel.add(diceTrayImageHeightLabel);
 		panel.add(Box.createVerticalStrut(spacing));
 		panel.add(imageSideLabel);
 		panel.add(Box.createVerticalStrut(spacing));
@@ -123,6 +131,8 @@ public class PropertiesWindow extends JFrame
 		dieImagesLoc = new JTextField(prop.getValue("dieImagesLoc"));
 		diceTrayWidth = new JTextField(prop.getValue("diceTrayWidth"));
 		diceTrayHeight = new JTextField(prop.getValue("diceTrayHeight"));
+		diceTrayImageWidth = new JTextField(prop.getValue("diceTrayImageWidth"));
+		diceTrayImageHeight = new JTextField(prop.getValue("diceTrayImageHeight"));
 		imageSide = new JTextField(prop.getValue("imageSide"));
 		rollValueColor = new JTextField(prop.getValue("rollValueColor"));
 
@@ -135,6 +145,8 @@ public class PropertiesWindow extends JFrame
 		);
 		diceTrayWidth.setToolTipText("How wide the area that displays the dice rolls is.");
 		diceTrayHeight.setToolTipText("How tall the area that displays the dice rolls is.");
+		diceTrayImageWidth.setToolTipText("How wide the image for the dice tray is.");
+		diceTrayImageHeight.setToolTipText("How tall the image for the dice tray is.");
 		imageSide.setToolTipText(
 				"Die images are square images. This is how big a side is. Should be same for all die types."
 		);
@@ -145,6 +157,8 @@ public class PropertiesWindow extends JFrame
 		panel.add(dieImagesLoc);
 		panel.add(diceTrayWidth);
 		panel.add(diceTrayHeight);
+		panel.add(diceTrayImageWidth);
+		panel.add(diceTrayImageHeight);
 		panel.add(imageSide);
 		panel.add(rollValueColor);
 	}
@@ -203,6 +217,8 @@ public class PropertiesWindow extends JFrame
 		prop.setValue("dieImagesLoc", dieImagesLoc.getText());
 		prop.setValue("diceTrayWidth", diceTrayWidth.getText());
 		prop.setValue("diceTrayHeight", diceTrayHeight.getText());
+		prop.setValue("diceTrayImageWidth", diceTrayImageWidth.getText());
+		prop.setValue("diceTrayImageHeight", diceTrayImageHeight.getText());
 		prop.setValue("imageSide", imageSide.getText());
 		prop.setValue("rollValueColor", rollValueColor.getText());
 
@@ -229,8 +245,10 @@ public class PropertiesWindow extends JFrame
 		backgroundColor.setText("#FFFFFF");
 		dieDefaultImagePath.setText("true");
 		dieImagesLoc.setText("/resources/");
-		diceTrayWidth.setText("3600");
-		diceTrayHeight.setText("500");
+		diceTrayWidth.setText("4000");
+		diceTrayHeight.setText("698");
+		diceTrayImageWidth.setText("1000");
+		diceTrayImageHeight.setText("349");
 		imageSide.setText("50");
 		rollValueColor.setText("#FFFFFF");
 

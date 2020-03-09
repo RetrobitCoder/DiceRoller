@@ -104,7 +104,8 @@ public class DiceTray extends JPanel
 		final int Y_OFFSET = 25;
 		final int IMAGE_SPACING = 60;
 
-		g.drawImage(images.getBackground(), x, y, null);
+		drawBackground(g);
+
 		g.setColor(prop.getRollValueColor());
 
 		for (Types type : diceSet.keySet())
@@ -119,6 +120,24 @@ public class DiceTray extends JPanel
 			x = UPPER_X;
 			y += LINE_SPACING;
 
+		}
+	}
+	
+	/**
+	 * Handle drawing background
+	 * @param g
+	 */
+	private void drawBackground(Graphics g)
+	{
+		final int BG_WIDTH = prop.getDiceTrayImageWidth();
+		final int BG_HEIGHT = prop.getDiceTrayImageHeight();
+
+		for(int i = 0; i < prop.getDiceTrayWidth(); i += BG_WIDTH)
+		{
+			for(int j = 0; j < prop.getDiceTrayHeight(); j += BG_HEIGHT)
+			{
+				g.drawImage(images.getBackground(), i, j, null);
+			}
 		}
 	}
 
