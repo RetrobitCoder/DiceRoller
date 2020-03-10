@@ -25,3 +25,22 @@ Summation of values for each die rolled broken into by die type and total sum of
 
 ### Config
 Text area has tool tips that will display when hovered over.
+
+- Background Color: Color of the drop down, totals, and buttons areas (need leading #)
+- Use Default Image Path: true if using default images, false if using your own
+- Location for Die and Dice Tray Images: path to where dice and dice tray images are (doesn't need trailing /)
+- Dice Tray Width
+- Dice Tray Height
+- Dice Tray Image Width
+- Dice Tray Image Height
+- Image Side: Dice images should be square, and this is the length of a side
+- Roll Value Color: Color of numbers that appear on dice (need leading #)
+
+### Image Naming
+Dice images need to be d#.png, where # is the number of sides.
+
+For dice there are d2, d4, d6, d8, d10, d12, d20, and d100 for percentile dice.
+
+Dice tray image needs to be diceTray.png.
+
+Image naming needs to be spelled exactly as writting above.
