@@ -222,6 +222,26 @@ public class ConfigProperties
 			return Color.WHITE;
 		}
 	}
+	
+	public int getRollValueFontSize()
+	{
+		if (configNotFound || properties.getProperty("rollFontSize") == null)
+			return 20;
+
+		try
+		{
+			return Integer.parseInt(properties.getProperty("rollFontSize").trim());
+		}
+		catch (NumberFormatException e)
+		{
+			JOptionPane.showMessageDialog(
+					null, "Roll font size couldn't be read as a number. Using default.", "Config Error",
+					JOptionPane.ERROR_MESSAGE, icon
+			);
+
+			return 20;
+		}
+	}
 
 	/**
 	 * Try reloading config file

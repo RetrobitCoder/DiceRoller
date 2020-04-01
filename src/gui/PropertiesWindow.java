@@ -33,6 +33,7 @@ public class PropertiesWindow extends JFrame
 	private JTextField diceTrayImageHeight;
 	private JTextField imageSide;
 	private JTextField rollValueColor;
+	private JTextField rollValueFontSize;
 
 	final private int WINDOW_SIDE = 50;
 
@@ -97,6 +98,7 @@ public class PropertiesWindow extends JFrame
 		JLabel diceTrayImageHeightLabel = new JLabel("Dice Tray Image Height;");
 		JLabel imageSideLabel = new JLabel("Image Side;");
 		JLabel rollValueColorLabel = new JLabel("Roll Value Color:");
+		JLabel rollFontSizeLabel = new JLabel("Roll Value Font Size:");
 
 		int spacing = 10;
 
@@ -117,6 +119,8 @@ public class PropertiesWindow extends JFrame
 		panel.add(imageSideLabel);
 		panel.add(Box.createVerticalStrut(spacing));
 		panel.add(rollValueColorLabel);
+		panel.add(Box.createVerticalStrut(spacing));
+		panel.add(rollFontSizeLabel);
 	}
 
 	/**
@@ -135,7 +139,8 @@ public class PropertiesWindow extends JFrame
 		diceTrayImageHeight = new JTextField(prop.getValue("diceTrayImageHeight"));
 		imageSide = new JTextField(prop.getValue("imageSide"));
 		rollValueColor = new JTextField(prop.getValue("rollValueColor"));
-
+		rollValueFontSize = new JTextField(prop.getValue("rollValueFontSize"));
+		
 		backgroundColor.setToolTipText("Sets the background color for the drop down, button, and total areas");
 		dieDefaultImagePath.setToolTipText(
 				"Uses default path to find the images for dice. Set to false if Die Images Location is a specific location."
@@ -161,6 +166,7 @@ public class PropertiesWindow extends JFrame
 		panel.add(diceTrayImageHeight);
 		panel.add(imageSide);
 		panel.add(rollValueColor);
+		panel.add(rollValueFontSize);
 	}
 
 	/**
@@ -221,7 +227,7 @@ public class PropertiesWindow extends JFrame
 		prop.setValue("diceTrayImageHeight", diceTrayImageHeight.getText());
 		prop.setValue("imageSide", imageSide.getText());
 		prop.setValue("rollValueColor", rollValueColor.getText());
-
+		prop.setValue("rollValueFontSize", rollValueFontSize.getText());
 		prop.save();
 	}
 
@@ -250,8 +256,9 @@ public class PropertiesWindow extends JFrame
 		diceTrayImageWidth.setText("1000");
 		diceTrayImageHeight.setText("349");
 		imageSide.setText("50");
-		rollValueColor.setText("#FFC270");
-
+		rollValueColor.setText("#4DFFDE");
+		rollValueFontSize.setText("20");
+		
 		prop.reload(true);
 
 		this.repaint();

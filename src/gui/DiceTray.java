@@ -5,6 +5,7 @@ package gui;
  * @author RetrobitCoder
  */
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.io.IOException;
 import java.util.TreeMap;
@@ -107,6 +108,7 @@ public class DiceTray extends JPanel
 		drawBackground(g);
 
 		g.setColor(prop.getRollValueColor());
+		g.setFont(new Font("TimesRoman", Font.BOLD, prop.getRollValueFontSize()));
 
 		for (Types type : diceSet.keySet())
 		{
