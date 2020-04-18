@@ -101,9 +101,9 @@ public class DiceTray extends JPanel
 	{
 		int x = UPPER_X;
 		int y = UPPER_Y;
-		final int X_OFFSET = prop.getImageSide() / 2 - 8;
-		final int Y_OFFSET = prop.getImageSide() / 2 + 6;
-		final int IMAGE_SPACING = 60;
+		final int X_OFFSET = prop.getImageSide() / 2 - 3 * prop.getRollValueFontSize() / 4;
+		final int Y_OFFSET = prop.getImageSide() / 2 + prop.getRollValueFontSize() / 4;
+		final int IMAGE_SPACING = prop.getImageSide();
 
 		drawBackground(g);
 
@@ -120,7 +120,7 @@ public class DiceTray extends JPanel
 				x += IMAGE_SPACING;
 			}
 			x = UPPER_X;
-			y += LINE_SPACING;
+			y += IMAGE_SPACING;
 
 		}
 	}

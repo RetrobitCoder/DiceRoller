@@ -251,11 +251,11 @@ public class PropertiesWindow extends JFrame
 		backgroundColor.setText("#FFFFFF");
 		dieDefaultImagePath.setText("true");
 		dieImagesLoc.setText("/resources/");
-		diceTrayWidth.setText("4000");
-		diceTrayHeight.setText("698");
-		diceTrayImageWidth.setText("1000");
-		diceTrayImageHeight.setText("349");
-		imageSide.setText("50");
+		diceTrayWidth.setText("5375");
+		diceTrayHeight.setText("836");
+		diceTrayImageWidth.setText("1075");
+		diceTrayImageHeight.setText("418");
+		imageSide.setText("100");
 		rollValueColor.setText("#4DFFDE");
 		rollValueFontSize.setText("20");
 		

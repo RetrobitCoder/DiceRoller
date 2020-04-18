@@ -12,8 +12,7 @@ public class Die
 	private Random generator;
 	private final Types dieType;
 	private int roll;
-	private static long offset = 1; // used to add more chance of apparent randomness
-
+	private static long offset = 303; //used to add randomness to subsequent die rolls
 	/**
 	 * Die constructor to make a die of a specific type
 	 * 
@@ -23,7 +22,8 @@ public class Die
 	{
 		dieType = type;
 		generator = new Random(System.currentTimeMillis() * offset);
-		offset++;
+		
+		offset *= 333;
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class Die
 	 */
 	public void rollDie()
 	{
-		roll = generator.nextInt(dieType.getSides()) + 1;
+		roll = generator.nextInt(dieType.getSides()) + 1;		
 	}
 
 	/**
