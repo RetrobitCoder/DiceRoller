@@ -68,7 +68,7 @@ public class DiceManager
 		{
 			die.rollDie();
 			dice.get(i).rollDie();
-
+			
 			if (die.getValue() > dice.get(i).getValue())
 			{
 				dice.set(i, die);

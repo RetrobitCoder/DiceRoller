@@ -164,7 +164,7 @@ public class DiceWindow
 	{
 		if (diceSet.containsKey(Types.D20))
 		{
-			diceSet.get(Types.D20).disadvantageRoll();
+			diceSet.get(Types.D20).advantageRoll();
 			diceTray.updateDice(diceSet);
 			updateTotals();
 		}
